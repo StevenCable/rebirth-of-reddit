@@ -17,15 +17,12 @@ function getMedia(){
     mediaCard.addEventListener('click', (e)=>{
 
     });
-    console.log("mainContainer: " + mainContainer);
-    console.log('mediaCard: '+ mediaCard);
     
     mainContainer.appendChild(mediaCard);
 
     let dataAsImage = document.createElement('img');
     dataAsImage.id = `dataImage-${i}`; 
     dataAsImage.src = parentAPITarget[i].data.url;
-    console.log("data as image: " + dataAsImage);
     dataAsImage.style.maxHeight = '500px';
     dataAsImage.style.maxWidth = '500px';
     mediaCard.appendChild(dataAsImage);
