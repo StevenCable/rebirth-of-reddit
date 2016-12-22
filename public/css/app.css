@@ -1,2 +1,61 @@
+header {
+  background-color: white;
+  height: 5rem;
+  justify-content: left;
+  display: flex;
+  align-items: center; }
+
+#logo {
+  background-image: url("/assets/logo.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 65px;
+  width: 100%; }
+
+#plus {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  justify-content: center;
+  border-color: orange;
+  background-color: white;
+  font-size: 2rem;
+  line-height: 8px;
+  color: #f1592a; }
+
 body {
-  background-image: url("/assets/bg.jpg"); }
+  background-image: url("/assets/bg.jpg");
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%; }
+
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-flow: row wrap; }
+
+.mediaContainer {
+  background-color: white;
+  border-color: black 2px dotted;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px; }
+
+.dataImage {
+  display: block;
+  height: 475px;
+  width: 100%;
+  justify-content: center; }
+
+.topMenu {
+  flex: 0 0 30%;
+  height: 80px; }
