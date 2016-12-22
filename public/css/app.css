@@ -1,3 +1,13 @@
+* {
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-size: 20px; }
+
 header {
   background-color: white;
   height: 5rem;
@@ -48,7 +58,9 @@ body {
   justify-content: center;
   padding-top: 25px;
   padding-left: 25px;
-  padding-right: 25px; }
+  padding-right: 25px;
+  padding-bottom: 25px;
+  margin-top: 0.5rem; }
 
 .dataImage {
   display: block;
@@ -57,5 +69,12 @@ body {
   justify-content: center; }
 
 .topMenu {
-  flex: 0 0 30%;
-  height: 80px; }
+  display: flex;
+  height: 60px;
+  border: solid 3px yellow; }
+
+span {
+  display: flex;
+  flex: 1 0 33%;
+  justify-content: center;
+  align-items: center; }
