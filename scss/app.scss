@@ -17,6 +17,7 @@ header{
   justify-content: left;
   display: flex;
   align-items: center;
+  box-shadow: 0px 5px 20px  black;
 
 }
 
@@ -63,26 +64,56 @@ body{
   flex-flow: row wrap;
 }
 
+
 .mediaContainer{
   background-color: white;
-  border-color: black 2px dotted;
-  height: 100%;
-  width: 95%;
-  display: flex;
-  justify-content: center;
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 25px;
-  margin-top: 0.5rem;
+  border-color: solid 2px black;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  // padding-top: 25px;
+  // padding-left: 25px;
+  // padding-right: 25px;
+  // padding-bottom: 25px;
+  margin: 0.5rem;  
   
 }
 
+.aspectRatio{
+  margin-bottom: 100%;
+//   display: flex;
+//   justify-content: center;
+//   
+//   margin: 0 auto;
+
+ }
+
+.imageDataContainer, .linkAsImage{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.linkAsImage{
+
+}
+
 .dataImage{
-  display: block;
-  height: 475px;
+  // display: block;
+  height: 60%;
   width: 100%;
   justify-content: center;
+  background-size: cover;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+
 
 }
 
@@ -90,6 +121,11 @@ body{
   display: flex; 
   height: 60px;
   border: solid 3px yellow;
+  background-color: #3A3A3C;
+  font-family: 'Oswald', sans-serif;
+  font-style: bold;
+  color: #818285; 
+
 }
 
 span{
@@ -97,6 +133,7 @@ span{
   flex: 1 0 33%;
   justify-content: center;
   align-items: center;
+  border-right: solid 1px #818285;
   
 }
 

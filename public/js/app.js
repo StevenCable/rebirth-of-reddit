@@ -11,19 +11,43 @@ let mainContainer = document.getElementById('mainContainer');
 
 function getMedia(){
   for (let i = 0; i < parentAPITarget.length; i++){
+    let pageData = parentAPITarget[i].data;
+
     let mediaCard = document.createElement('div');
     mediaCard.className = 'mediaContainer';
-    // mediaCard.addEventListener('click', (e)=>{
 
-    // });    
     mainContainer.appendChild(mediaCard);
+
+    let aspectRatio = document.createElement('div');
+    aspectRatio.className = 'aspectRatio';
+    mediaCard.appendChild(aspectRatio);
+
+    let imageDataContainer = document.createElement('div');
+    imageDataContainer.className = 'imageDataContainer';
+    mediaCard.appendChild(imageDataContainer);
+    // imageDataContainer.addEventListener('click', (e)=>{
+      
+
+    // });
+    let linkAsImage = document.createElement('a');
+    linkAsImage.className = 'linkAsImage';
+    imageDataContainer.appendChild(linkAsImage);
+    linkAsImage.setAttribute('href',pageData.url);
 
     let dataAsImage = document.createElement('div');
     dataAsImage.className = `dataImage`; 
-    dataAsImage.style.background = `url(${parentAPITarget[i].data.url})no-repeat center`;
-    // dataAsImage.style.maxHeight = '500px';
-    // dataAsImage.style.maxWidth = '500px';
-    mediaCard.appendChild(dataAsImage);
+    dataAsImage.style.background = `url(${pageData.url})no-repeat center`;
+    linkAsImage.appendChild(dataAsImage);
+
+
+    // let linkAsData = document.createElement('a');
+    // linkAsData.className = 'linkAsImage';
+    // imageDataContainer.appendChild(linkAsData);
+
+    // let dataAsImage = document.createElement('div');
+    // dataAsImage.className = `dataImage`; 
+    // dataAsImage.style.background = `url(${parentAPITarget[i].data.url})no-repeat center`;
+    // imageDataContainer.appendChild(dataAsImage);
 
     
 
