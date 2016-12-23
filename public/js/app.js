@@ -29,25 +29,55 @@ function getMedia(){
       
 
     // });
+
+//IMAGE
     let linkAsImage = document.createElement('a');
     linkAsImage.className = 'linkAsImage';
     imageDataContainer.appendChild(linkAsImage);
     linkAsImage.setAttribute('href',pageData.url);
+    
 
     let dataAsImage = document.createElement('div');
     dataAsImage.className = `dataImage`; 
     dataAsImage.style.background = `url(${pageData.url})no-repeat center`;
     linkAsImage.appendChild(dataAsImage);
 
+//TITLE
+    let linkAsTitle = document.createElement('a');
+    linkAsTitle.className = 'linkAsTitle';
+    imageDataContainer.appendChild(linkAsTitle);
+    linkAsTitle.setAttribute('href',pageData.url);
 
-    // let linkAsData = document.createElement('a');
-    // linkAsData.className = 'linkAsImage';
-    // imageDataContainer.appendChild(linkAsData);
+    let dataAsTitle = document.createElement('div');
+    dataAsTitle.className = `dataTitle`; 
+    dataAsTitle.innerHTML = pageData.title;
+    imageDataContainer.appendChild(dataAsTitle);
 
-    // let dataAsImage = document.createElement('div');
-    // dataAsImage.className = `dataImage`; 
-    // dataAsImage.style.background = `url(${parentAPITarget[i].data.url})no-repeat center`;
-    // imageDataContainer.appendChild(dataAsImage);
+//AUTHOR
+    let linkAsAuthor = document.createElement('a');
+    linkAsTitle.className = 'linkAsAuthor';
+    imageDataContainer.appendChild(linkAsAuthor);
+    linkAsTitle.setAttribute('href',pageData.url);
+
+    let dataAsAuthor = document.createElement('div');
+    dataAsAuthor.className = `dataAuthor`; 
+    dataAsAuthor.innerHTML = pageData.author;
+    imageDataContainer.appendChild(dataAsAuthor);
+
+//TIME POSTED
+    // let linkAsTimeCreated = document.createElement('a');
+    // linkAsTimeCreated.className = 'linkAsTimeCreated';
+    // imageDataContainer.appendChild(linkAsTimeCreated);
+    // linkAsTimeCreated.setAttribute('href',pageData.url);
+
+    let dataAsTimeCreated = document.createElement('div');
+    dataAsTimeCreated.className = `dataTimeCreated`; 
+    dataAsTimeCreated.innerHTML = moment.unix(pageData.created_utc).fromNow();
+    imageDataContainer.appendChild(dataAsTimeCreated);
+
+//VOTES
+
+//COMMENTS
 
     
 
