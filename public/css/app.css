@@ -37,6 +37,22 @@ header {
   line-height: 8px;
   color: #f1592a; }
 
+.topMenu {
+  display: flex;
+  height: 3rem;
+  border: solid 3px yellow;
+  background-color: #3A3A3C;
+  font-family: 'Oswald', serif;
+  font-style: bold;
+  color: #818285; }
+
+span {
+  display: flex;
+  flex: 1 0 33%;
+  justify-content: center;
+  align-items: center;
+  border-right: solid 1px #818285; }
+
 body {
   background-image: url("/assets/bg.jpg");
   display: flex;
@@ -78,19 +94,3 @@ body {
   margin-top: 25px;
   margin-left: 25px;
   margin-right: 25px; }
-
-.topMenu {
-  display: flex;
-  height: 60px;
-  border: solid 3px yellow;
-  background-color: #3A3A3C;
-  font-family: 'Oswald', sans-serif;
-  font-style: bold;
-  color: #818285; }
-
-span {
-  display: flex;
-  flex: 1 0 33%;
-  justify-content: center;
-  align-items: center;
-  border-right: solid 1px #818285; }

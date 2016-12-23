@@ -46,6 +46,26 @@ header{
   color: rgb(241, 89, 42);
 }
 
+.topMenu{
+  display: flex; 
+  height: 3rem;
+  border: solid 3px yellow;
+  background-color: #3A3A3C;
+  font-family: 'Oswald', serif;
+  font-style: bold;
+  color: #818285; 
+
+}
+
+span{
+  display: flex;
+  flex: 1 0 33%;
+  justify-content: center;
+  align-items: center;
+  border-right: solid 1px #818285;
+  
+}
+
 body{
   // background-color: lightblue;
 
@@ -117,25 +137,7 @@ body{
 
 }
 
-.topMenu{
-  display: flex; 
-  height: 60px;
-  border: solid 3px yellow;
-  background-color: #3A3A3C;
-  font-family: 'Oswald', sans-serif;
-  font-style: bold;
-  color: #818285; 
 
-}
-
-span{
-  display: flex;
-  flex: 1 0 33%;
-  justify-content: center;
-  align-items: center;
-  border-right: solid 1px #818285;
-  
-}
 
 
 //medium and large files
