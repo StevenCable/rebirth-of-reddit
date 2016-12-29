@@ -14,15 +14,31 @@ header {
   justify-content: left;
   display: flex;
   align-items: center;
-  box-shadow: 0px 5px 20px  black; }
+  box-shadow: 0px 5px 20px  black;
+  border: solid 3px green; }
+  @media only screen and (min-device-width: 461px) and (max-device-width: 1024px), only screen and (min-device-width: 1024px) and (min-width: 461px) {
+    header {
+      display: flex;
+      background: url("/assets/header_bg.svg") no-repeat center;
+      background-color: white;
+      align-items: center;
+      justify-content: center; } }
 
 #logo {
   background-image: url("/assets/logo.svg");
   background-position: center left;
   background-repeat: no-repeat;
+  align-items: center;
   display: flex;
   height: 65px;
-  width: 100%; }
+  width: 100%;
+  justify-content: flex-end; }
+  @media only screen and (min-device-width: 461px) and (max-device-width: 1024px), only screen and (min-device-width: 1024px) and (min-width: 461px) {
+    #logo {
+      display: flex;
+      align-items: center;
+      background-position: center;
+      justify-content: flex-end; } }
 
 #plus {
   height: 2rem;
@@ -64,7 +80,8 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  border: 5px solid purple; }
 
 .mediaContainer {
   background-color: white;
@@ -72,6 +89,7 @@ body {
   width: 100%;
   display: inline-block;
   position: relative;
+  border: 5px solid orange;
   margin: 0.5rem; }
 
 .aspectRatio {
@@ -84,13 +102,29 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  flex-flow: row wrap;
+  justify-content: center;
+  border: 5px solid red; }
 
-.dataImage {
+.linkAsImage {
+  border: 5px solid skyblue;
+  overflow: auto; }
+
+.dataAsImage {
   height: 60%;
   width: 100%;
   justify-content: center;
   background-size: cover;
   margin-top: 25px;
   margin-left: 25px;
-  margin-right: 25px; }
+  margin-right: 25px;
+  display: block;
+  border: 5px solid pink; }
+
+.dataAsText {
+  background-color: navy;
+  width: calc(100% - 50px);
+  font-size: 0.75rem; }
+  @media only screen and (min-device-width: 1024px) and (min-width: 1024px) {
+    .dataAsText {
+      background-color: green; } }

@@ -1,3 +1,11 @@
+//Imports
+
+// @import "partials/clearfix.scss";
+// @import "partials/general_styles.scss";
+// @import "partials/reset.scss";
+@import "partials/media-query.scss";
+
+
 // .small-grid{
 *{
   top: 0px;
@@ -18,17 +26,32 @@ header{
   display: flex;
   align-items: center;
   box-shadow: 0px 5px 20px  black;
-
+  border: solid 3px green;
+  @include respond-to(medium-window){
+    display: flex;
+    background: url("/assets/header_bg.svg") no-repeat center;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+      }
+    
 }
-
+    
 #logo{
   background-image: url("/assets/logo.svg");
   background-position: center left;
   background-repeat: no-repeat;
-  // align-items: center;
+  align-items: center;
   display: flex;
   height: 65px;
   width: 100%;
+  justify-content: flex-end;
+  @include respond-to(medium-window){
+    display: flex;
+    align-items: center;
+    background-position: center;
+    justify-content: flex-end;
+  }
 
 }
 
@@ -64,6 +87,7 @@ span{
   align-items: center;
   border-right: solid 1px #818285;
   
+  
 }
 
 body{
@@ -82,6 +106,7 @@ body{
   justify-content: center;
   width: 100%;
   flex-flow: row wrap;
+  border: 5px solid purple;
 }
 
 
@@ -91,13 +116,16 @@ body{
   width: 100%;
   display: inline-block;
   position: relative;
+  border: 5px solid orange;
   // display: flex;
   // justify-content: center;
   // padding-top: 25px;
   // padding-left: 25px;
   // padding-right: 25px;
   // padding-bottom: 25px;
-  margin: 0.5rem;  
+  margin: 0.5rem; 
+
+   
   
 }
 
@@ -116,15 +144,18 @@ body{
   height: 100%;
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  border: 5px solid red;
 
 }
 
 .linkAsImage{
-
+  border: 5px solid skyblue;
+  overflow: auto;
 }
 
-.dataImage{
+.dataAsImage{
   // display: block;
   height: 60%;
   width: 100%;
@@ -133,9 +164,24 @@ body{
   margin-top: 25px;
   margin-left: 25px;
   margin-right: 25px;
-
+  display: block;
+  border: 5px solid pink;
 
 }
+
+.dataAsText{
+  background-color: navy;
+  width: calc(100% - 50px);
+  font-size: 0.75rem;
+  @include respond-to (large-window){
+  background-color: green;
+    }
+}
+
+// .linkAsTitle{}
+// .linkAsAuthor{}
+// .linkAsTimeCreated{}
+// .linkAsUpVotes{}
 
 
 
@@ -147,14 +193,4 @@ body{
 //   height: 3rem;
 //   // background-repeat: no-repeat;
 // }
-
-
-
-
-
-
-
-// body:hover {
-//     background-color: cornflowerblue;
-//   }
 // }

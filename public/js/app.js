@@ -38,31 +38,36 @@ function getMedia(){
     
 
     let dataAsImage = document.createElement('div');
-    dataAsImage.className = `dataImage`; 
+    dataAsImage.className = `dataAsImage`; 
     dataAsImage.style.background = `url(${pageData.url})no-repeat center`;
     linkAsImage.appendChild(dataAsImage);
+
+//TEXT
+    let dataAsText = document.createElement('div');
+    dataAsText.className = 'dataAsText';
+    linkAsImage.appendChild(dataAsText);
 
 //TITLE
     let linkAsTitle = document.createElement('a');
     linkAsTitle.className = 'linkAsTitle';
-    imageDataContainer.appendChild(linkAsTitle);
+    dataAsText.appendChild(linkAsTitle);
     linkAsTitle.setAttribute('href',pageData.url);
 
     let dataAsTitle = document.createElement('div');
-    dataAsTitle.className = `dataTitle`; 
+    dataAsTitle.className = `dataAsTitle`; 
     dataAsTitle.innerHTML = pageData.title;
-    imageDataContainer.appendChild(dataAsTitle);
+    dataAsText.appendChild(dataAsTitle);
 
 //AUTHOR
     let linkAsAuthor = document.createElement('a');
     linkAsTitle.className = 'linkAsAuthor';
-    imageDataContainer.appendChild(linkAsAuthor);
+    dataAsText.appendChild(linkAsAuthor);
     linkAsTitle.setAttribute('href',pageData.url);
 
     let dataAsAuthor = document.createElement('div');
-    dataAsAuthor.className = `dataAuthor`; 
+    dataAsAuthor.className = `by: ${dataAsAuthor}`; 
     dataAsAuthor.innerHTML = pageData.author;
-    imageDataContainer.appendChild(dataAsAuthor);
+    dataAsText.appendChild(dataAsAuthor);
 
 //TIME POSTED
     // let linkAsTimeCreated = document.createElement('a');
@@ -71,13 +76,17 @@ function getMedia(){
     // linkAsTimeCreated.setAttribute('href',pageData.url);
 
     let dataAsTimeCreated = document.createElement('div');
-    dataAsTimeCreated.className = `dataTimeCreated`; 
+    dataAsTimeCreated.className = `dataAsTimeCreated`; 
     dataAsTimeCreated.innerHTML = moment.unix(pageData.created_utc).fromNow();
-    imageDataContainer.appendChild(dataAsTimeCreated);
+    dataAsText.appendChild(dataAsTimeCreated);
 
 //VOTES
+    let dataAsUpVotes = document.createElement('div');
+    dataAsUpVotes.className = `dataAsUpVotes`; 
+    dataAsUpVotes.innerHTML = `${pageData.ups} views`;
+    dataAsText.appendChild(dataAsUpVotes);
 
-//COMMENTS
+
 
     
 
